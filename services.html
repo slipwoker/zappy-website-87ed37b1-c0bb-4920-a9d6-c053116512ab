@@ -1,0 +1,692 @@
+<!DOCTYPE html><html lang="he" dir="rtl" data-zappy-site-type="ecommerce"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה</title>
+  <meta name="description" content="Services - בית נאמן - תיווך נדל" ן="" וייעוץ="" משכנתאות="" באמונה="" provides="" professional="" פיננסים="" ונדל"ן="" services.="" specializing="" in="" ייעוץ="" לדירה="" ראשונה."="">
+  <meta name="keywords" content="ייעוץ משכנתאות לדירה ראשונה, יועץ משכנתאות מומלץ באמונה, תיווך נדלן וייעוץ משכנתאות, יועץ משכנתאות">
+  <meta name="robots" content="index, follow">
+  
+  <meta property="og:title" content="Services - בית נאמן - תיווך נדל" ן="" וייעוץ="" משכנתאות="" באמונה"="">
+  <meta property="og:description" content="Services - בית נאמן - תיווך נדל" ן="" וייעוץ="" משכנתאות="" באמונה="" provides="" professional="" פיננסים="" ונדל"ן="" services.="" specializing="" in="" ייעוץ="" לדירה="" ראשונה."="">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="he_IL">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services - בית נאמן - תיווך נדל" ן="" וייעוץ="" משכנתאות="" באמונה"="">
+  <meta name="twitter:description" content="Services - בית נאמן - תיווך נדל" ן="" וייעוץ="" משכנתאות="" באמונה="" provides="" professional="" פיננסים="" ונדל"ן="" services.="" specializing="" in="" ייעוץ="" לדירה="" ראשונה."="">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '87ed37b1-c0bb-4920-a9d6-c053116512ab',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+
+    <style id="zappy-dropdown-submenu-styles">
+      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
+      /* Base styles for dropdown submenus - parent must be positioned */
+      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
+      /* Submenu base - hidden by default */
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      /* CRITICAL: Desktop hover styles to show dropdown */
+      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Submenu item styling */
+      .sub-menu li { list-style: none; margin: 0; padding: 0; }
+      .sub-menu a { display: block !important; padding: 10px 16px !important; color: #333 !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
+      .sub-menu a:hover { background-color: #f5f5f5; }
+      /* RTL (Hebrew/Arabic) dropdown positioning */
+      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
+      /* Hide empty dropdown menus */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Desktop: show submenu on Menu Group hover */
+      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Menu Group title styling */
+      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
+      
+      /* ========== MOBILE SUBMENU STYLES ========== */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
+        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
+        /* Disable hover behavior on mobile */
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; }
+        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
+        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; background: transparent !important; border: none !important; cursor: pointer !important; }
+        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; }
+        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+</head>
+<body>
+
+    <div class="mobile-search-panel" id="mobile-search-panel">
+      <div class="search-wrapper">
+        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
+        <button class="search-submit" id="mobile-search-submit" title="חיפוש">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+        <button class="close-search" id="close-mobile-search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="search-results" id="mobile-search-results"></div>
+    </div>
+  
+<script>window.ZAPPY_WEBSITE_ID = "87ed37b1-c0bb-4920-a9d6-c053116512ab";window.ZAPPY_API_BASE = (window.location.pathname.includes('/preview') ? "https://api.zappy5.com" : "https://api.zappy5.com");</script>
+  <nav class="\&quot;navbar\&quot;" dir="\&quot;rtl\&quot;">\n  <button class="\&quot;mobile-toggle\&quot;" id="\&quot;mobileToggle\&quot;" aria-label="\&quot;Menu\&quot;">\n    <svg 0="" 24="" class="\&quot;hamburger-icon\&quot;" width="\&quot;24\&quot;" height="\&quot;24\&quot;" viewBox="\&quot;0" 24\"="" fill="\&quot;none\&quot;">\n      <path d="\&quot;M3" 12h18m3="" 6h18m3="" 18h18\"="" stroke="\&quot;currentColor\&quot;" stroke-width="\&quot;2\&quot;" stroke-linecap="\&quot;round\&quot;/">\n    </path></svg>\n    <svg 0="" 24="" class="\&quot;close-icon\&quot;" width="\&quot;24\&quot;" height="\&quot;24\&quot;" viewBox="\&quot;0" 24\"="" fill="\&quot;none\&quot;" style="\&quot;display:none;\&quot;">\n      <path d="\&quot;M18" 6l6="" 18m6="" 6l12="" 12\"="" stroke="\&quot;currentColor\&quot;" stroke-width="\&quot;2\&quot;" stroke-linecap="\&quot;round\&quot;/">\n    </path></svg>\n  </button>\n  \n  <button class="\&quot;phone-header-btn\&quot;" aria-label="\&quot;Call\&quot;">\n    <svg 0="" 24="" width="\&quot;20\&quot;" height="\&quot;20\&quot;" viewBox="\&quot;0" 24\"="" fill="\&quot;currentColor\&quot;">\n      <path 0="" 1="" 2="" 6="" 16="" 22="" d="\&quot;M22" 16.92v3a2="" 1-2.18="" 19.79="" 1-8.63-3.07="" 19.5="" 1-6-6="" 1-3.07-8.67a2="" 4.11="" 2h3a2="" 1.72="" 12.84="" .7="" 2.81="" 1-.45="" 2.11l8.09="" 9.91a16="" 6l1.27-1.27a2="" 2.11-.45="" 2.81.7a2="" 16.92z\"=""></path>\n    </svg>\n  </button>\n  \n  <div class="\&quot;nav-container\&quot;">\n    <div class="\&quot;nav-brand\&quot;">\n      <a href="\&quot;/\&quot;" class="\&quot;logo-link\&quot;">\n        <img src="/assets/logo.webp" alt="בית נאמן - תיווך נדל&quot;ן וייעוץ משכנתאות באמונה" class="logo" />\n      </a>\n    </div>\n    \n    <ul class="\&quot;nav-menu\&quot;" id="\&quot;navMenu\&quot;">
+
+    <li class="menu-item-has-children zappy-products-dropdown">
+      <a href="/products">
+        מוצרים
+        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 9l6 6 6-6"></path>
+        </svg>
+      </a>
+      <ul class="sub-menu" id="zappy-nav-category-links">
+        <li><a href="/products">כל המוצרים</a></li>
+        <!-- Categories will be loaded dynamically -->
+      </ul>
+    </li>
+  \n      <li><a href="\&quot;/services\&quot;">שירותים</a></li>\n      <li><a href="\&quot;/about\&quot;">אודות</a></li>\n    <li><a href="\&quot;/contact\&quot;">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><div class="nav-search-box">
+    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
+    <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    </button>
+    <div class="nav-search-results" id="nav-search-results"></div>
+  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button></div>\n    \n    \n  </div>\n</nav>
+
+    <nav class="zappy-catalog-menu rtl" id="zappy-catalog-menu" dir="rtl">
+      <div class="catalog-menu-container">
+        <a href="/products" class="catalog-menu-item catalog-menu-all">כל המוצרים</a>
+        <div class="catalog-menu-categories" id="zappy-category-links">
+          <!-- Categories will be loaded dynamically -->
+        </div>
+      </div>
+    </nav>
+  
+  
+  <main>
+    <section class="services-intro-section" data-layout-spec="Services-intro">
+  <div class="services-intro-container">
+    <div class="services-intro-header">
+      <h1>הדרכה מעשית להחלטות פיננסיות ונדל"ניות</h1>
+      <p class="services-intro-description">אנחנו כאן כדי להציב ציפיות ברורות—הסברים מובנים, המלצות מדודות ותמיכה יציבה לאורך כל הדרך. בין אם אתם צועדים לראשונה לעבר בית משלכם, מאזנים תזרים משפחתי חודשי או מחפשים בהירות לפני החלטה משמעותית—אנחנו כאן בשבילכם.</p>
+    </div>
+
+    <div class="services-intro-cards">
+      <article class="services-intro-card">
+        <div class="services-intro-card-icon">
+          <svg data-element-type="icon" data-icon-type="svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 5L5 15V30C5 31.3261 5.52678 32.5979 6.46447 33.5355C7.40215 34.4732 8.67392 35 10 35H30C31.3261 35 32.5979 34.4732 33.5355 33.5355C34.4732 32.5979 35 31.3261 35 30V15L20 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M15 35V20H25V35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <h3>מחפשי דירה ראשונה</h3>
+        <p>אם אתם עומדים בפני הצעד הראשון לקראת בית משלכם, אנחנו כאן כדי להפוך את המסע למובן ובטוח. נלווה אתכם בכל שלב—מהבנת האפשרויות ועד חתימה סופית.</p>
+      </article>
+
+      <article class="services-intro-card">
+        <div class="services-intro-card-icon">
+          <svg data-element-type="icon" data-icon-type="svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="12" r="5" stroke="currentColor" stroke-width="2"></circle>
+            <path d="M12 35C12 28.9249 16.4772 24 22 24C27.5228 24 32 28.9249 32 35" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <circle cx="10" cy="15" r="3" stroke="currentColor" stroke-width="2"></circle>
+            <circle cx="30" cy="15" r="3" stroke="currentColor" stroke-width="2"></circle>
+            <path d="M5 32C5 28.134 7.68629 25 11 25" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M35 32C35 28.134 32.3137 25 29 25" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <h3>משפחות המאזנות תזרים חודשי</h3>
+        <p>כשההוצאות החודשיות דורשות תכנון קפדני, אנחנו עוזרים לכם למצוא את האיזון הנכון בין משכנתא, הוצאות שוטפות ויעדים עתידיים. בשקט, בסבלנות ובהבנה מלאה.</p>
+      </article>
+
+      <article class="services-intro-card">
+        <div class="services-intro-card-icon">
+          <svg data-element-type="icon" data-icon-type="svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 5V20M20 20L30 15M20 20L10 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M5 25L20 32L35 25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M5 18L20 25L35 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="20" cy="20" r="2" fill="currentColor"></circle>
+          </svg>
+        </div>
+        <h3>מחפשי בהירות לפני החלטה גדולה</h3>
+        <p>לפני שמתחייבים להחלטה פיננסית משמעותית, חשוב להבין את כל המשתנים. אנחנו מספקים ניתוח שקט ומדויק שעוזר לכם לקבל החלטות מושכלות ללא לחץ.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services-capabilities-section" data-layout-spec="Services-capabilities">
+  <div class="services-capabilities-container">
+    <div class="services-capabilities-image-column">
+      <div class="services-capabilities-image-wrapper">
+        <img data-placeholder="services-capabilities-image-1" data-context="Warm natural window light illuminating a clean kitchen table with organized financial documents and papers neatly arranged, soft focus on a coffee cup in background, warm beige and cream tones, professional yet homey atmosphere for Israeli real estate and mortgage consulting business" width="600" height="700" src="/assets/site-services-capabilities-image-1.webp" alt="שולחן מסודר עם מסמכים פיננסיים באור חם">
+      </div>
+    </div>
+    
+    <div class="services-capabilities-content-column">
+      <h2 class="services-capabilities-title">התחומים המרכזיים שלנו</h2>
+      <p class="services-capabilities-intro">הליווי שלנו מותאם אישית ומוסבר בשפה פשוטה וברורה. אנחנו מאמינים שכל החלטה פיננסית חשובה צריכה להתקבל מתוך הבנה מלאה ורגשי ביטחון.</p>
+      
+      <div class="services-capabilities-grid">
+        <div class="services-capabilities-card">
+          <div class="services-capabilities-card-icon">
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12h24M4 20h24M8 8v16M24 8v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="2"></circle>
+            </svg>
+          </div>
+          <h3 class="services-capabilities-card-title">מיפוי תקציב</h3>
+          <p class="services-capabilities-card-text">בניית תמונה ברורה של המצב הכלכלי ויכולת ההחזר החודשית.</p>
+        </div>
+        
+        <div class="services-capabilities-card">
+          <div class="services-capabilities-card-icon">
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 16h8M18 16h8M16 8v8M16 18v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <rect x="4" y="4" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2"></rect>
+            </svg>
+          </div>
+          <h3 class="services-capabilities-card-title">השוואת אפשרויות משכנתא</h3>
+          <p class="services-capabilities-card-text">ניתוח מעמיק של מסלולים שונים והתאמה למצבך הייחודי.</p>
+        </div>
+        
+        <div class="services-capabilities-card">
+          <div class="services-capabilities-card-icon">
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 24V12l8-6 8 6v12M8 24h16M8 24H4M24 24h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M12 24v-6h8v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <h3 class="services-capabilities-card-title">ניתוח קנייה מול שכירות</h3>
+          <p class="services-capabilities-card-text">חישוב כלכלי מפורט שעוזר להחליט מה משתלם יותר לטווח ארוך.</p>
+        </div>
+        
+        <div class="services-capabilities-card">
+          <div class="services-capabilities-card-icon">
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="2"></circle>
+              <path d="M16 11v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M8 6L6 8M24 6l2 2M8 26l-2-2M24 26l2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <h3 class="services-capabilities-card-title">תכנון מודע סיכונים</h3>
+          <p class="services-capabilities-card-text">זיהוי סיכונים פיננסיים אפשריים ובניית אסטרטגיית הגנה.</p>
+        </div>
+        
+        <div class="services-capabilities-card">
+          <div class="services-capabilities-card-icon">
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="6" width="24" height="20" rx="2" stroke="currentColor" stroke-width="2"></rect>
+              <path d="M4 12h24M10 6v4M22 6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <circle cx="12" cy="18" r="1.5" fill="currentColor"></circle>
+              <circle cx="20" cy="18" r="1.5" fill="currentColor"></circle>
+              <circle cx="16" cy="22" r="1.5" fill="currentColor"></circle>
+            </svg>
+          </div>
+          <h3 class="services-capabilities-card-title">תכנון ציר זמן למעבר</h3>
+          <p class="services-capabilities-card-text">לוח זמנים מפורט לכל שלבי הרכישה והמימון.</p>
+        </div>
+        
+        <div class="services-capabilities-card">
+          <div class="services-capabilities-card-icon">
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 16l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <rect x="4" y="4" width="24" height="24" rx="3" stroke="currentColor" stroke-width="2"></rect>
+              <path d="M4 10h24" stroke="currentColor" stroke-width="2"></path>
+            </svg>
+          </div>
+          <h3 class="services-capabilities-card-title">רשימות בדיקה לשלבי חתימה</h3>
+          <p class="services-capabilities-card-text">מדריך צעד אחר צעד שמבטיח שלא פספסת שום פרט חשוב.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-case-studies-section" data-layout-spec="Services-case-studies">
+  <div class="services-case-studies-divider-top"></div>
+  <div class="services-case-studies-container">
+    <div class="services-case-studies-header">
+      <h2>דוגמאות לבניית בהירות</h2>
+      <p>המקרים המוצגים כאן הם דוגמאות אנונימיות המבוססות על דפוסים אמיתיים. אלו אינן הבטחות, אלא דרכים שבהן אנו מסייעים ללקוחות לקבל החלטות מושכלות יותר.</p>
+    </div>
+
+    <div class="services-case-studies-cases">
+      <article class="services-case-studies-card">
+        <h3>החלטה על דירה ראשונה תחת לחץ תקציבי</h3>
+        <div class="services-case-studies-challenge">
+          <h4>האתגר</h4>
+          <p>זוג צעיר מצא דירה שאהב, אך לא היה בטוח אם התקציב מאפשר את הרכישה מבלי להיכנס ללחץ כלכלי מתמשך. הם חששו מהוצאות נסתרות ומשינויים בריבית.</p>
+        </div>
+        <div class="services-case-studies-approach">
+          <h4>הגישה שלנו</h4>
+          <p>בנינו תמונה חודשית מפורטת הכוללת משכנתה, ועד בית, ארנונה והוצאות צפויות. בדקנו מספר תרחישי ריבית והצגנו את המצב הגרוע ביותר לצד התרחיש הסביר. כך הם קיבלו החלטה מבוססת נתונים, לא רגשות בלבד.</p>
+        </div>
+        <div class="services-case-studies-outcomes">
+          <h5>תוצאות</h5>
+          <ul>
+            <li>
+              <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <span>תמונה חודשית ברורה יותר של ההוצאות</span>
+            </li>
+            <li>
+              <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <span>פחות נעלמים ופחות הפתעות</span>
+            </li>
+            <li>
+              <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <span>צעד הבא בטוח ומבוסס</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="services-case-studies-card">
+        <h3>משפחה שוקלת מימון מחדש ושיפוץ</h3>
+        <div class="services-case-studies-challenge">
+          <h4>האתגר</h4>
+          <p>משפחה עם שני ילדים שקלה לשפץ את הבית, אך לא ידעה אם כדאי למשכן מחדש או לקחת הלוואה נפרדת. הם חששו מעלייה בתשלום החודשי ומהשפעה על תקציב המשפחה לטווח ארוך.</p>
+        </div>
+        <div class="services-case-studies-approach">
+          <h4>הגישה שלנו</h4>
+          <p>השווינו בין שני מסלולים: מימון מחדש מול הלוואה נפרדת. הצגנו את ההשפעה על התשלום החודשי, את עלות הריבית לאורך זמן ואת הגמישות של כל אפשרות. כך הם קיבלו תמונה מלאה ויכלו לבחור בדרך המתאימה להם.</p>
+        </div>
+        <div class="services-case-studies-outcomes">
+          <h5>תוצאות</h5>
+          <ul>
+            <li>
+              <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <span>הבנה ברורה של העלויות האמיתיות</span>
+            </li>
+            <li>
+              <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <span>החלטה מושכלת על סוג המימון</span>
+            </li>
+            <li>
+              <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <span>ביטחון בצעד הבא</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services-faq-section" data-layout-spec="Services-faq">
+  <div class="services-faq-container">
+    <div class="services-faq-header">
+      <h2>שאלות נפוצות, תשובות פשוטות</h2>
+      <p>אנחנו כאן כדי להסביר, להרגיע ולתת לכם את כל המידע שאתם צריכים. אם משהו לא ברור – תמיד אפשר לשאול.</p>
+    </div>
+    
+    <div class="services-faq-grid">
+      <article class="services-faq-card">
+        <svg class="services-faq-icon" data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <h3>מה קורה בשיחה הראשונה?</h3>
+        <p>אנחנו מתחילים בהקשבה. נשמע מה חשוב לכם, מה המצב הכלכלי, ומה התכניות. השיחה הראשונה היא בלי התחייבות, בלי לחץ – רק כדי להבין איך אפשר לעזור.</p>
+      </article>
+
+      <article class="services-faq-card">
+        <svg class="services-faq-icon" data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <h3>איך אתם מסבירים את האפשרויות?</h3>
+        <p>בשפה פשוטה, בלי ז'רגון מקצועי. אנחנו מציגים את האופציות בצורה ברורה, מסבירים את היתרונות והחסרונות של כל מסלול, ועוזרים לכם להבין מה הכי מתאים למצב שלכם.</p>
+      </article>
+
+      <article class="services-faq-card">
+        <svg class="services-faq-icon" data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M14 2V8H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M16 13H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M16 17H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M10 9H9H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <h3>מה כדאי להכין לפגישה?</h3>
+        <p>תלושי שכר אחרונים, אישורי הכנסות, פרטים על הנכס שמעניין אתכם (אם יש), ומידע על התחייבויות כלכליות קיימות. אבל גם בלי הכל – אפשר להתחיל ולהשלים בהמשך.</p>
+      </article>
+
+      <article class="services-faq-card">
+        <svg class="services-faq-icon" data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+          <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <h3>כמה זמן לוקח התהליך?</h3>
+        <p>זה תלוי במורכבות המקרה ובמהירות התגובה של הבנקים, אבל בדרך כלל תוך 2-4 שבועות אפשר להגיע לאישור עקרוני. אנחנו נלווה אתכם בכל שלב ונדאג שהתהליך יזרום בצורה הכי חלקה.</p>
+      </article>
+
+      <article class="services-faq-card">
+        <svg class="services-faq-icon" data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+          <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <h3>אתם עובדים עם משפחות?</h3>
+        <p>בהחלט. הרבה מהלקוחות שלנו הם משפחות צעירות שקונות דירה ראשונה, או משפחות שמשדרגות דיור. אנחנו מבינים את הצרכים המיוחדים של משפחות ויודעים לתת מענה מותאם.</p>
+      </article>
+
+      <article class="services-faq-card">
+        <svg class="services-faq-icon" data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M12 17H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <h3>מה אם אני עדיין לא מוכן להחליט?</h3>
+        <p>זה בסדר גמור. אנחנו כאן כדי ללוות, לא ללחוץ. אפשר לקבל מאיתנו מידע, להבין את האפשרויות, ולקחת את הזמן שצריך כדי להחליט. גם אם תחזרו אלינו בעוד חודשיים – נהיה כאן.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services-cta-section" data-layout-spec="Services-cta">
+  <div class="services-cta-container">
+    <h2 class="services-cta-heading">בואו נעשה את הצעד הבא קל יותר</h2>
+    <p class="services-cta-description">שתפו אותנו במצבכם ותקבלו תשובה ברורה וליווי אישי. אנחנו כאן כדי להקל על התהליך ולהעניק לכם ביטחון בכל שלב.</p>
+    <a href="/contact" class="services-cta-button">צרו קשר</a>
+    <p class="services-cta-reassurance">אנחנו מבטיחים שיחה ראשונה ללא התחייבות, בשפה ברורה ובגובה העיניים</p>
+  </div>
+</section>
+  </main>
+  
+  <footer class="site-footer"><div class="footer-container"><div class="footer-content"><div class="footer-section company-info"><img src="/assets/logo.webp" alt="בית נאמן - תיווך נדל&quot;ן וייעוץ משכנתאות באמונה" class="logo" /><p class="company-description">מתמחים בתיווך נדל"ן וייעוץ משכנתאות מקצועי ואמין. אנחנו כאן כדי להפוך את החלום שלכם למציאות.</p></div><div class="footer-section quick-links"><h3>קישורים מהירים</h3><ul><li><a href="/services">שירותים</a></li><li><a href="/about">אודות</a></li><li><a href="/contact">צור קשר</a></li></ul></div><div class="footer-section contact-info"><h3>יצירת קשר</h3><ul><li><i class="fas fa-envelope"></i><a href="mailto:[business_email]">[business_email]</a></li><li><i class="fas fa-phone"></i><a href="tel:[business_phone]">[business_phone]</a></li><li><a href="/"><i class="fas fa-map-marker-alt"></i><span>[business_address]</span></a></li></ul></div><div class="footer-section social-media"><h3>עקבו אחרינו</h3><div class="social-icons"><a href="[facebook_handle]" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a><a href="[instagram_handle]" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a><a href="[whatsapp_handle]" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-bottom"><div class="legal-links"><a href="/privacy">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms">תנאי שימוש</a><span class="separator">|</span>
+            <a href="/return-policy" aria-label="מדיניות החזרות">
+              מדיניות החזרות
+            </a><span class="separator">|</span><a href="/accessibility">הצהרת נגישות</a></div><p class="copyright">© 2026 בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה. כל הזכויות שמורות.</p><a href="https://zappy5.com" target="_blank" class="zappy-attribution" rel="noopener noreferrer">Generated by Zappy</a></div></div></footer>
+  
+  <a href="https://wa.me/[whatsapp_handle]" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <script src="/script.js"></script>
+
+    <div data-integration="accessibility:toolbar"></div>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
+    })();
+    </script>
+</body></html>

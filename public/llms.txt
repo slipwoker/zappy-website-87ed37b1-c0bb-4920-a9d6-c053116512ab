@@ -1,0 +1,67 @@
+# בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה — Generative Engine Optimization Map
+
+> A פיננסים ונדל"ן business.
+
+---
+
+## Pages
+
+### Home
+https://-87ed37b1.zappy5.app
+
+### Services
+https://-87ed37b1.zappy5.app/services
+
+### About
+https://-87ed37b1.zappy5.app/about
+
+### Contact
+https://-87ed37b1.zappy5.app/contact
+
+### Products
+https://-87ed37b1.zappy5.app/products
+המוצרים שלנו - בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה
+
+### Product Detail
+https://-87ed37b1.zappy5.app/product/:slug
+פרטי המוצר - בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה
+
+### Category
+https://-87ed37b1.zappy5.app/category/:slug
+מוצרים - בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה
+
+## Legal & Policy
+
+### Privacy Policy
+https://-87ed37b1.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-87ed37b1.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-87ed37b1.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה
+בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה is a business in the פיננסים ונדל"ן industry.
+
+## Target Audience
+- רוכשי דירות ראשונים
+- משקיעי נדל"ן
+- בעלי בתים המעוניינים לשדרג
+
+## Industry
+פיננסים ונדל"ן
+
+---
+
+# Additional Resources
+
+- **Sitemap**: https://-87ed37b1.zappy5.app/sitemap.xml
+- **Robots.txt**: https://-87ed37b1.zappy5.app/robots.txt

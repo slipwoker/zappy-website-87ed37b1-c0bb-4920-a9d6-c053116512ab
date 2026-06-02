@@ -218,34 +218,25 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    </meta>
-  </meta>
+    <meta property="og:type" content="website">
+  <meta property="og:locale" content="he_IL">
   
-  </meta>
-  </meta>
-  </meta>
   
-  </meta>
-  </meta>
-  <meta property="og:type" content="website"></meta>
-  <meta property="og:locale" content="he_IL"></meta>
   
-  </meta>
-  </meta>
-  </meta>
-  </link>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></link>
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"></link>
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"></link>
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"></link>
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png"></link>
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png"></link>
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png"></link>
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"></link>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css"></link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
@@ -302,11 +293,37 @@
     </style>
 
     <style id="zappy-widget-visibility">
-      #mic-access-tool-general-button, .mic-access-tool-general-button,
-      #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
-      ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
-      #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
-        display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+      html[dir="rtl"] .whatsapp-float { right: 20px !important; left: auto !important; }
+      html[dir="ltr"] .whatsapp-float, html:not([dir]) .whatsapp-float { left: 20px !important; right: auto !important; }
+      html[dir="rtl"] #mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
+      html[dir="rtl"] #mic-init-access-tool .mic-access-tool-general-button,
+      html[dir="rtl"] #mic-init-access-tool #mic-access-tool-general-button,
+      html[dir="rtl"] ._access-icon { left: 20px !important; right: auto !important; }
+      html[dir="ltr"] #mic-access-tool-general-button, html[dir="ltr"] .mic-access-tool-general-button,
+      html[dir="ltr"] #mic-init-access-tool .mic-access-tool-general-button,
+      html[dir="ltr"] #mic-init-access-tool #mic-access-tool-general-button,
+      html[dir="ltr"] ._access-icon,
+      html:not([dir]) #mic-access-tool-general-button, html:not([dir]) .mic-access-tool-general-button,
+      html:not([dir]) #mic-init-access-tool .mic-access-tool-general-button,
+      html:not([dir]) #mic-init-access-tool #mic-access-tool-general-button,
+      html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
+      @media (max-width: 768px) { .whatsapp-float { display: flex !important; } }
+      @media (min-width: 769px) { .whatsapp-float { display: flex !important; } }
+      @media (max-width: 768px) {
+        #mic-access-tool-general-button, .mic-access-tool-general-button,
+        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        }
+      }
+      @media (min-width: 769px) {
+        #mic-access-tool-general-button, .mic-access-tool-general-button,
+        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        }
       }
     </style>
 </head>
@@ -315,7 +332,7 @@
 
     <div class="mobile-search-panel" id="mobile-search-panel">
       <div class="search-wrapper">
-        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off"></input>
+        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
         <button class="search-submit" id="mobile-search-submit" title="חיפוש">
           <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
         </button>
@@ -326,7 +343,7 @@
       <div class="search-results" id="mobile-search-results"></div>
     </div>
   
-<script>window.ZAPPY_WEBSITE_ID = "87ed37b1-c0bb-4920-a9d6-c053116512ab";window.ZAPPY_API_BASE = (window.location.pathname.includes('/preview') ? "https://api.zappy5.com" : "https://api.zappy5.com");</script>
+<script>window.ZAPPY_WEBSITE_ID = "87ed37b1-c0bb-4920-a9d6-c053116512ab";window.ZAPPY_API_BASE = "https://api.zappy5.com";</script>
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg class="hamburger-icon" width="24" height="24" viewbox="0 0 24 24" fill="none">
@@ -346,7 +363,7 @@
   <div class="nav-container">
     <div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/logo-1770712375314-gxok08.webp?v=1770712375916-dosc3l" alt="בית נאמן - תיווך נדל&amp;amp;quot;ן וייעוץ משכנתאות באמונה" class="logo"></img>
+        <img src="/assets/logo-1770712375314-gxok08.webp?v=1770712375916-dosc3l" alt="בית נאמן - תיווך נדל&amp;amp;quot;ן וייעוץ משכנתאות באמונה" class="logo">
       </a>
     </div>
     
@@ -360,10 +377,13 @@
         </svg>
       </a>
       <ul class="sub-menu" id="zappy-nav-category-links">
-        <li><a href="/products">כל המוצרים</a></li>
+        <li><a href="/products" data-i18n="ecom_products">מוצרים</a></li>
         <!-- Categories will be loaded dynamically -->
       </ul>
     </li>
+  
+
+    
   
         
 
@@ -392,7 +412,7 @@
   
   <main>
     <section class="home-hero-section" data-layout-spec="Home-Hero" data-hero-type="fullscreen-card">
-  <img data-placeholder="home-hero-bg" data-context="Warm, inviting photograph of a young Israeli family in their bright living room with natural window light, holding house keys and smiling with relief and trust. Soft depth of field, focus on hands holding keys in foreground, family slightly blurred in background. Warm golden hour lighting through window. Real estate and mortgage advisory context. Professional yet intimate atmosphere. Israeli home interior with warm tones, cream walls, wooden furniture. Photorealistic, high quality, editorial style." data-preserve-bg="0" class="home-hero-bg" width="1920" height="1080" src="/assets/site-home-hero-bg.webp" alt="משפחה ישראלית מחזיקה מפתחות בית חדש באור חם"></img>
+  <img data-placeholder="home-hero-bg" data-context="Warm, inviting photograph of a young Israeli family in their bright living room with natural window light, holding house keys and smiling with relief and trust. Soft depth of field, focus on hands holding keys in foreground, family slightly blurred in background. Warm golden hour lighting through window. Real estate and mortgage advisory context. Professional yet intimate atmosphere. Israeli home interior with warm tones, cream walls, wooden furniture. Photorealistic, high quality, editorial style." data-preserve-bg="0" class="home-hero-bg" width="1920" height="1080" src="/assets/site-home-hero-bg.webp" alt="משפחה ישראלית מחזיקה מפתחות בית חדש באור חם">
   
   <div class="home-hero-scrim" aria-hidden="true"></div>
   
@@ -589,7 +609,7 @@
     <div class="home-services-imagery-column">
       <div class="home-services-image-wrapper">
         <div class="home-services-paper-backplate"></div>
-        <img data-placeholder="home-services-image-1" data-context="Warm, naturally lit Israeli home interior detail: sunlit entryway with wooden surface, house keys on a simple keyring, soft morning light streaming through a window, warm cream and terracotta tones, minimalist and authentic feel, shallow depth of field, real estate and home ownership concept, professional photography style" width="600" height="700" src="/assets/site-home-services-image-1.webp" alt="פרטי בית ישראלי מואר באור טבעי עם מפתחות על משטח עץ"></img>
+        <img data-placeholder="home-services-image-1" data-context="Warm, naturally lit Israeli home interior detail: sunlit entryway with wooden surface, house keys on a simple keyring, soft morning light streaming through a window, warm cream and terracotta tones, minimalist and authentic feel, shallow depth of field, real estate and home ownership concept, professional photography style" width="600" height="700" src="/assets/site-home-services-image-1.webp" alt="פרטי בית ישראלי מואר באור טבעי עם מפתחות על משטח עץ">
       </div>
     </div>
   </div>
@@ -673,15 +693,23 @@
   <!DOCTYPE >
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8"></meta>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה</title>
 </head>
 <body>
-<footer class="site-footer"><div class="footer-container"><div class="footer-content"><div class="footer-section company-info"><img src="/assets/logo-1770712375314-gxok08.webp?v=1770712375916-dosc3l" alt="בית נאמן - תיווך נדל&amp;amp;quot;ן וייעוץ משכנתאות באמונה" class="logo"></img><p class="company-description">מתמחים בתיווך נדל"ן וייעוץ משכנתאות מקצועי ואמין. אנחנו כאן כדי להפוך את החלום שלכם למציאות.</p></div><div class="footer-section quick-links"><h3>קישורים מהירים</h3><ul><li><a href="/services">שירותים</a></li><li><a href="/about-us">אודות</a></li><li><a href="/contact">צור קשר</a></li></ul></div><div class="footer-section contact-info"><h3>יצירת קשר</h3><ul><li><i class="fas fa-envelope"></i><a href="mailto:bait.neaman@gmail.com">bait.neaman@gmail.com</a></li><li><i class="fas fa-phone"></i><a href="tel:054-4861141">054-4861141</a></li><li><a href="/"><i class="fas fa-map-marker-alt"></i><span>הרב מימון 14, פתח תקווה, 4957368, ישראל</span></a></li></ul></div><div class="footer-section social-media"><h3>עקבו אחרינו</h3><div class="social-icons"><a href="https://www.facebook.com/bait.neaman/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/baitneaman/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a><a href="https://wa.me/972544861141" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a><a href="https://youtube.com/@https://myaccount.google.com/u/1/yourdata/youtube?hl=iw" aria-label="YouTube" target="_blank" rel="noopener noreferrer" data-element-id="element-ai-1770707088213-y9t4k2" data-element-type="social-link"><i class="fab fa-youtube"></i></a></div></div></div><div class="footer-bottom"><div class="legal-links"><a href="/privacy">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms">תנאי שימוש</a><span class="separator">|</span>
+<footer class="site-footer"><div class="footer-container"><div class="footer-content"><div class="footer-section company-info"><img src="/assets/logo-1770712375314-gxok08.webp?v=1770712375916-dosc3l" alt="בית נאמן - תיווך נדל&amp;amp;quot;ן וייעוץ משכנתאות באמונה" class="logo"><p class="company-description">מתמחים בתיווך נדל"ן וייעוץ משכנתאות מקצועי ואמין. אנחנו כאן כדי להפוך את החלום שלכם למציאות.</p></div><div class="footer-section quick-links"><h3>קישורים מהירים</h3><ul><li><a href="/services">שירותים</a></li><li><a href="/about-us">אודות</a></li><li><a href="/contact">צור קשר</a></li></ul></div><div class="footer-section contact-info"><h3>יצירת קשר</h3><ul><li><i class="fas fa-envelope"></i><a href="mailto:bait.neaman@gmail.com">bait.neaman@gmail.com</a></li><li><i class="fas fa-phone"></i><a href="tel:054-4861141">054-4861141</a></li><li><a href="/"><i class="fas fa-map-marker-alt"></i><span>הרב מימון 14, פתח תקווה, 4957368, ישראל</span></a></li></ul></div><div class="footer-section social-media"><h3>עקבו אחרינו</h3><div class="social-icons"><a href="https://www.facebook.com/bait.neaman/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/baitneaman/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a><a href="https://wa.me/972544861141" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a><a href="https://youtube.com/@https://myaccount.google.com/u/1/yourdata/youtube?hl=iw" aria-label="YouTube" target="_blank" rel="noopener noreferrer" data-element-id="element-ai-1770707088213-y9t4k2" data-element-type="social-link"><i class="fab fa-youtube"></i></a></div></div></div><div class="footer-bottom"><div class="legal-links"><a href="/privacy">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms">תנאי שימוש</a><span class="separator">|</span>
             <a href="/return-policy" aria-label="מדיניות החזרות">
               מדיניות החזרות
             </a><span class="separator">|</span><a href="/accessibility">הצהרת נגישות</a></div><p class="copyright">© 2026 בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה. כל הזכויות שמורות.</p><a href="https://zappy5.com" target="_blank" class="zappy-attribution" rel="noopener noreferrer">Generated by Zappy</a></div></div></footer>
+
+<div class="zappy-qv-overlay" id="zappy-qv-overlay" hidden></div>
+<div class="zappy-qv-modal" id="zappy-qv-modal" role="dialog" aria-modal="true" aria-label="תצוגה מהירה" hidden>
+  <button type="button" class="zappy-qv-close" id="zappy-qv-close" aria-label="סגור">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="zappy-qv-content" id="zappy-qv-content"></div>
+</div>
 
     <script id="zappy-mobile-submenu-script">
     (function() {

@@ -1,4 +1,6 @@
-# Business — Generative Engine Optimization Map
+# בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה — Generative Engine Optimization Map
+
+> A פיננסים ונדל"ן business.
 
 ---
 
@@ -44,12 +46,31 @@ Information about WCAG compliance and accessibility features.
 
 ---
 
-# Business Context (for LLM understanding)
+## Products
 
-## About Business
+_No products are currently configured._
+
 ---
 
-# Additional Resources
+# Business Context (for LLM understanding)
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+## About בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה
+בית נאמן - תיווך נדל"ן וייעוץ משכנתאות באמונה is a business in the פיננסים ונדל"ן industry.
+
+## Target Audience
+- רוכשי דירות ראשונים
+- משקיעי נדל"ן
+- בעלי בתים המעוניינים לשדרג
+
+## Industry
+פיננסים ונדל"ן
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://example.com/sitemap.xml
+- Robots: https://example.com/robots.txt
+- Flattened page text (for LLMs): https://example.com/llms-full.txt
+- Products (JSON): https://example.com/products.json
+- Products (Google Merchant RSS): https://example.com/product-feed.xml
